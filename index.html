@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Colegio Champagnat Caracas - Convocatoria Docente: Tu Huella Cuenta. Únete a nuestros comités estratégicos y lidera la transformación de nuestra cultura escolar.">
+    <meta name="theme-color" content="#2563eb">
+    <title>Convocatoria Docente: Tu Huella Cuenta | Colegio Champagnat Caracas</title>
+
+    <!-- Preconnect to external resources -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- External Libraries -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.plot.ly/plotly-2.27.0.min.js"></script>
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="overflow-x-hidden">
+
+    <!-- ============================================
+         NAVBAR - ENHANCED
+         ============================================ -->
+    <nav class="navbar" id="navbar">
+        <div class="navbar-container">
+            <div class="navbar-content">
+                <!-- Logo Section -->
+                <a href="#inicio" class="logo-section">
+                    <img src="Logo/572592177_18100635868708495_3237081652857706809_n.jpg"
+                        alt="Escudo Colegio Champagnat Caracas" class="logo-image" loading="eager">
+                    <div class="logo-text">
+                        <span class="logo-text-main">Colegio Champagnat</span>
+                        <span class="logo-text-sub">Maristas • Caracas</span>
+                    </div>
+                </a>
+
+                <!-- Navigation Links -->
+                <div class="nav-links">
+                    <a href="#inicio" class="nav-link active" data-i18n="nav.home">Inicio</a>
+                    <a href="#induccion" class="nav-link" data-i18n="nav.mentors">Mentores</a>
+                    <a href="#bienestar" class="nav-link" data-i18n="nav.wellness">Bienestar</a>
+                    <a href="#impacto" class="nav-link" data-i18n="nav.impact">Impacto</a>
+                </div>
+
+                <!-- Navbar Controls: Theme & Language -->
+                <div class="navbar-controls">
+                    <!-- Language Selector -->
+                    <div class="language-selector">
+                        <button class="lang-btn active" data-lang="es" aria-label="Español">ES</button>
+                        <button class="lang-btn" data-lang="en" aria-label="English">EN</button>
+                    </div>
+
+                    <!-- Theme Toggle -->
+                    <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema">
+                        <!-- Moon Icon (Light Mode) -->
+                        <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                        </svg>
+                        <!-- Sun Icon (Dark Mode) -->
+                        <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="5"></circle>
+                            <line x1="12" y1="1" x2="12" y2="3"></line>
+                            <line x1="12" y1="21" x2="12" y2="23"></line>
+                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                            <line x1="1" y1="12" x2="3" y2="12"></line>
+                            <line x1="21" y1="12" x2="23" y2="12"></line>
+                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                        </svg>
+                    </button>
+
+                    <!-- Mobile Menu Button -->
+                    <button class="mobile-menu-btn" aria-label="Menú de navegación">
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
+
+    <!-- Mobile Menu Panel -->
+    <nav class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-links">
+            <a href="#inicio" class="mobile-menu-link active" data-i18n="nav.home">Inicio</a>
+            <a href="#induccion" class="mobile-menu-link" data-i18n="nav.mentors">Mentores</a>
+            <a href="#bienestar" class="mobile-menu-link" data-i18n="nav.wellness">Bienestar</a>
+            <a href="#impacto" class="mobile-menu-link" data-i18n="nav.impact">Impacto</a>
+        </div>
+        <div class="mobile-menu-controls">
+            <button class="lang-btn active" data-lang="es" aria-label="Español">ES</button>
+            <button class="lang-btn" data-lang="en" aria-label="English">EN</button>
+        </div>
+    </nav>
+
+    <!-- ============================================
+         HERO SECTION - ENHANCED WITH SLIDER
+         ============================================ -->
+    <section id="inicio" class="hero-section mesh-gradient">
+        <div class="hero-container">
+            <!-- Hero Content -->
+            <div class="hero-content">
+                <div class="hero-text-wrapper">
+                    <!-- Badge -->
+                    <div class="hero-badge badge-modern">
+                        <span class="hero-badge-dot"></span>
+                        <span data-i18n="hero.badge">Convocatoria Abierta 2026</span>
+                    </div>
+
+                    <h1 class="hero-title title-modern">
+                        <span class="block" data-i18n="hero.title1">Tu experiencia</span>
+                        <span class="block gradient-text text-gradient-animated" data-i18n="hero.title2">es nuestra
+                            brújula</span>
+                    </h1>
+                    <p class="hero-description" data-i18n="hero.description">
+                        La fuerza de nuestro colegio no está en las paredes, sino en las personas. Te invitamos a
+                        liderar la transformación de nuestra cultura escolar uniéndote a nuestros nuevos comités
+                        estratégicos.
+                    </p>
+                    <div class="hero-cta">
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLScNTLh7xXOT_c47f28jFWgtgBKce0BoRGm63lzmgsx3csPLyQ/viewform?usp=header"
+                            class="cta-button btn-modern glow-effect">
+                            <span data-i18n="hero.cta">¡Inscríbete Ahora!</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" style="margin-left: 8px;">
+                                <path d="M5 12h14M12 5l7 7-7 7" />
+                            </svg>
+                        </a>
+                        <a href="#induccion" class="secondary-button">
+                            <span data-i18n="hero.secondary">Conocer más</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hero Slider -->
+            <div class="hero-slider-wrapper">
+                <!-- Background Images (Blurred) -->
+                <div class="hero-bg-images">
+                    <div class="hero-bg-slide active">
+                        <img src="Imagenes/1.webp" alt="" aria-hidden="true">
+                    </div>
+                    <div class="hero-bg-slide">
+                        <img src="Imagenes/2.webp" alt="" aria-hidden="true">
+                    </div>
+                    <div class="hero-bg-slide">
+                        <img src="Imagenes/3.webp" alt="" aria-hidden="true">
+                    </div>
+                    <div class="hero-bg-slide">
+                        <img src="Imagenes/4.webp" alt="" aria-hidden="true">
+                    </div>
+                </div>
+                <!-- Overlay for blur effect -->
+                <div class="hero-bg-overlay"></div>
+
+                <div class="hero-slider">
+                    <div class="hero-slider-container">
+                        <!-- Slides -->
+                        <div class="hero-slide active">
+                            <img src="Imagenes/1.webp" alt="Instalaciones del Colegio Champagnat - Vista 1"
+                                loading="lazy">
+                        </div>
+                        <div class="hero-slide">
+                            <img src="Imagenes/2.webp" alt="Instalaciones del Colegio Champagnat - Vista 2"
+                                loading="lazy">
+                        </div>
+                        <div class="hero-slide">
+                            <img src="Imagenes/3.webp" alt="Instalaciones del Colegio Champagnat - Vista 3"
+                                loading="lazy">
+                        </div>
+                        <div class="hero-slide">
+                            <img src="Imagenes/4.webp" alt="Instalaciones del Colegio Champagnat - Vista 4"
+                                loading="lazy">
+                        </div>
+                    </div>
+
+                    <!-- Navigation Buttons -->
+                    <button class="slider-nav-btn prev" aria-label="Imagen anterior">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M15 18l-6-6 6-6" />
+                        </svg>
+                    </button>
+                    <button class="slider-nav-btn next" aria-label="Imagen siguiente">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M9 18l6-6-6-6" />
+                        </svg>
+                    </button>
+
+                    <!-- Dots Indicators -->
+                    <div class="slider-dots">
+                        <button class="slider-dot active" aria-label="Ir a imagen 1"></button>
+                        <button class="slider-dot" aria-label="Ir a imagen 2"></button>
+                        <button class="slider-dot" aria-label="Ir a imagen 3"></button>
+                        <button class="slider-dot" aria-label="Ir a imagen 4"></button>
+                    </div>
+
+                    <!-- Progress Bar -->
+                    <div class="slider-progress"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         SECTION 1: COMITÉ DE INDUCCIÓN
+         ============================================ -->
+    <section id="induccion" class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-base text-blue-600 font-semibold tracking-wide uppercase"
+                    data-i18n="induction.subtitle">Comité de Inducción</h2>
+                <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl"
+                    data-i18n="induction.title">
+                    Sé un Mentor de Excelencia
+                </p>
+                <p class="mt-4 max-w-2xl text-xl text-gray-500 mx-auto" data-i18n="induction.description">
+                    ¿Recuerdas tu primer día? Buscamos profesores con trayectoria para guiar a los nuevos talentos. No
+                    se trata solo de enseñar procesos, sino de transmitir nuestra mística.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <!-- Chart Container -->
+                <div class="glass-card p-6 rounded-2xl shadow-lg card-3d">
+                    <h3 class="text-lg font-bold text-gray-800 mb-4 text-center" data-i18n="induction.chart.title">
+                        Perfil del Mentor Ideal</h3>
+                    <div class="chart-container">
+                        <canvas id="radarMentorChart"></canvas>
+                    </div>
+                    <p class="text-sm text-gray-500 text-center mt-2 italic" data-i18n="induction.chart.caption">
+                        Habilidades clave para el rol de mentoría.
+                    </p>
+                </div>
+
+                <!-- Content -->
+                <div class="space-y-6">
+                    <div class="flex items-start feature-item">
+                        <div
+                            class="flex-shrink-0 h-12 w-12 flex items-center justify-center rounded-xl bg-blue-100 text-blue-600 text-2xl">
+                            🤝
+                        </div>
+                        <div class="ml-4">
+                            <h4 class="text-lg font-medium text-gray-900" data-i18n="induction.feature1.title">
+                                Acompañamiento Cercano</h4>
+                            <p class="mt-2 text-base text-gray-500" data-i18n="induction.feature1.desc">
+                                Sé el primer punto de contacto. Ayuda a navegar la logística escolar y las normas no
+                                escritas de nuestra comunidad.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="flex items-start feature-item">
+                        <div
+                            class="flex-shrink-0 h-12 w-12 flex items-center justify-center rounded-xl bg-blue-100 text-blue-600 text-2xl">
+                            🧭
+                        </div>
+                        <div class="ml-4">
+                            <h4 class="text-lg font-medium text-gray-900" data-i18n="induction.feature2.title">Guía
+                                Cultural</h4>
+                            <p class="mt-2 text-base text-gray-500" data-i18n="induction.feature2.desc">
+                                Transmite los valores y tradiciones que nos hacen únicos. Asegura que la identidad del
+                                colegio perdure.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="flex items-start feature-item">
+                        <div
+                            class="flex-shrink-0 h-12 w-12 flex items-center justify-center rounded-xl bg-blue-100 text-blue-600 text-2xl">
+                            🚀
+                        </div>
+                        <div class="ml-4">
+                            <h4 class="text-lg font-medium text-gray-900" data-i18n="induction.feature3.title">Impulsor
+                                de Talento</h4>
+                            <p class="mt-2 text-base text-gray-500" data-i18n="induction.feature3.desc">
+                                Potencia las habilidades de los nuevos ingresos, ofreciendo retroalimentación
+                                constructiva y apoyo emocional.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         SECTION 2: BIENESTAR Y CULTURA
+         ============================================ -->
+    <section id="bienestar" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-base text-emerald-600 font-semibold tracking-wide uppercase"
+                    data-i18n="wellness.subtitle">Comité de Bienestar</h2>
+                <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl title-modern"
+                    data-i18n="wellness.title">
+                    Institucionalicemos la Alegría
+                </p>
+                <p class="mt-4 max-w-2xl text-xl text-gray-500 mx-auto" data-i18n="wellness.description">
+                    Un equipo que se divierte unido, trabaja mejor. Este comité diseñará las experiencias que nos
+                    recargan de energía y fortalecen nuestros lazos.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <!-- Text Content -->
+                <div class="order-2 md:order-1 flex flex-col justify-center">
+                    <p class="text-lg text-gray-600 mb-6" data-i18n="wellness.intro">
+                        Buscamos mentes creativas y corazones activos para organizar un abanico de actividades. Desde
+                        torneos deportivos relámpago hasta salidas culturales enriquecedoras.
+                    </p>
+                    <div class="bg-emerald-50 rounded-xl p-6 border border-emerald-100 card-3d">
+                        <h4 class="font-bold text-emerald-800 mb-3" data-i18n="wellness.list.title">¿Qué organizaremos?
+                        </h4>
+                        <ul class="space-y-2">
+                            <li class="flex items-center text-gray-700">
+                                <span class="text-emerald-500 mr-2">✓</span> <span
+                                    data-i18n="wellness.list.item1">Torneos deportivos (Fútbol, Voleibol)</span>
+                            </li>
+                            <li class="flex items-center text-gray-700">
+                                <span class="text-emerald-500 mr-2">✓</span> <span data-i18n="wellness.list.item2">Club
+                                    de lectura y cine</span>
+                            </li>
+                            <li class="flex items-center text-gray-700">
+                                <span class="text-emerald-500 mr-2">✓</span> <span
+                                    data-i18n="wellness.list.item3">Convivios temáticos mensuales</span>
+                            </li>
+                            <li class="flex items-center text-gray-700">
+                                <span class="text-emerald-500 mr-2">✓</span> <span
+                                    data-i18n="wellness.list.item4">Pausas activas y bienestar físico</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Plotly Chart Container -->
+                <div class="order-1 md:order-2 glass-card p-4 rounded-2xl shadow-lg flex flex-col items-center card-3d">
+                    <h3 class="text-lg font-bold text-gray-800 mb-2 text-center" data-i18n="wellness.chart.title">
+                        Universo de Actividades Propuestas</h3>
+                    <div id="sunburstDiv" class="w-full h-[400px]"></div>
+                    <p class="text-xs text-gray-400 text-center mt-2" data-i18n="wellness.chart.caption">Distribución
+                        jerárquica de iniciativas de
+                        bienestar.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         SECTION 3: IMPACTO Y BENEFICIOS
+         ============================================ -->
+    <section id="impacto" class="py-16 bg-blue-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-3xl font-extrabold tracking-tight sm:text-4xl mb-6 title-modern"
+                        data-i18n="impact.title">
+                        ¿Por qué unirte?
+                    </h2>
+                    <p class="text-blue-200 text-lg mb-8" data-i18n="impact.description">
+                        Participar en estos comités no es solo "más trabajo", es una oportunidad de crecimiento personal
+                        y profesional. Es tu oportunidad de dejar una marca indeleble en la institución.
+                    </p>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div
+                            class="bg-blue-800 p-4 rounded-lg transition-all duration-300 hover:bg-blue-700 hover:transform hover:-translate-y-1 cursor-default card-3d">
+                            <div class="text-3xl mb-2">🏆</div>
+                            <h4 class="font-bold" data-i18n="impact.card1.title">Liderazgo</h4>
+                            <p class="text-sm text-blue-200" data-i18n="impact.card1.desc">Desarrolla habilidades de
+                                gestión y coordinación de
+                                equipos.</p>
+                        </div>
+                        <div
+                            class="bg-blue-800 p-4 rounded-lg transition-all duration-300 hover:bg-blue-700 hover:transform hover:-translate-y-1 cursor-default card-3d">
+                            <div class="text-3xl mb-2">🕸️</div>
+                            <h4 class="font-bold" data-i18n="impact.card2.title">Networking</h4>
+                            <p class="text-sm text-blue-200" data-i18n="impact.card2.desc">Conecta con colegas de otras
+                                áreas y niveles.</p>
+                        </div>
+                        <div
+                            class="bg-blue-800 p-4 rounded-lg transition-all duration-300 hover:bg-blue-700 hover:transform hover:-translate-y-1 cursor-default card-3d">
+                            <div class="text-3xl mb-2">😊</div>
+                            <h4 class="font-bold" data-i18n="impact.card3.title">Clima Laboral</h4>
+                            <p class="text-sm text-blue-200" data-i18n="impact.card3.desc">Contribuye directamente a un
+                                ambiente más feliz.</p>
+                        </div>
+                        <div
+                            class="bg-blue-800 p-4 rounded-lg transition-all duration-300 hover:bg-blue-700 hover:transform hover:-translate-y-1 cursor-default card-3d">
+                            <div class="text-3xl mb-2">📜</div>
+                            <h4 class="font-bold" data-i18n="impact.card4.title">Reconocimiento</h4>
+                            <p class="text-sm text-blue-200" data-i18n="impact.card4.desc">Certificación oficial de
+                                participación en comités.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="glass-card bg-white/10 p-6 rounded-2xl border border-white/20 card-3d">
+                    <h3 class="text-lg font-bold text-white mb-4 text-center" data-i18n="impact.chart.title">Nivel de
+                        Impacto Proyectado</h3>
+                    <div class="chart-container">
+                        <canvas id="impactBarChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         CALL TO ACTION / FOOTER
+         ============================================ -->
+    <section id="contacto" class="py-16 bg-white border-t border-gray-200">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold text-gray-900 mb-8 title-modern" data-i18n="contact.title">¡Hagamos Equipo!
+            </h2>
+
+            <div
+                class="bg-gray-50 rounded-2xl p-8 shadow-sm border border-gray-100 inline-block w-full md:w-auto gradient-border">
+                <p class="text-xl text-gray-600 mb-6"><span data-i18n="contact.deadline">Las inscripciones están
+                        abiertas hasta el</span> <span class="font-bold text-blue-600"
+                        data-i18n="contact.deadline.date">[Fecha Límite]</span></p>
+
+                <div class="flex flex-col md:flex-row gap-4 justify-center">
+                    <div
+                        class="flex items-center justify-center px-6 py-4 bg-white border border-gray-200 rounded-lg shadow-sm transition-all duration-300 hover:shadow-md hover:border-blue-200 card-3d">
+                        <span class="text-2xl mr-3">✍️</span>
+                        <div class="text-left">
+                            <p class="text-xs text-gray-500 uppercase font-bold" data-i18n="contact.register.label">
+                                Regístrate con</p>
+                            <p class="font-bold text-gray-800" data-i18n="contact.register.name">[Nombre del
+                                Coordinador]</p>
+                        </div>
+                    </div>
+
+                    <div
+                        class="flex items-center justify-center px-6 py-4 bg-white border border-gray-200 rounded-lg shadow-sm transition-all duration-300 hover:shadow-md hover:border-blue-200 card-3d">
+                        <span class="text-2xl mr-3">📍</span>
+                        <div class="text-left">
+                            <p class="text-xs text-gray-500 uppercase font-bold" data-i18n="contact.location.label">
+                                Lugar</p>
+                            <p class="font-bold text-gray-800" data-i18n="contact.location.name">Sala de Profesores</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         FOOTER
+         ============================================ -->
+    <footer class="bg-gray-900 text-gray-400 py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+                <div class="flex items-center gap-3">
+                    <img src="Logo/572592177_18100635868708495_3237081652857706809_n.jpg" alt="Logo Colegio Champagnat"
+                        class="h-10 rounded-lg opacity-80">
+                    <div>
+                        <p class="font-semibold text-white" data-i18n="footer.school">Colegio Champagnat</p>
+                        <p class="text-sm" data-i18n="footer.location">Hermanos Maristas • Caracas, Venezuela</p>
+                    </div>
+                </div>
+                <div class="text-center md:text-right">
+                    <p class="text-sm" data-i18n="footer.copyright">© 2026 Colegio Champagnat Caracas.</p>
+                    <p class="text-xs mt-1" data-i18n="footer.rights">Todos los derechos reservados.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom JavaScript -->
+    <script src="main.js"></script>
+</body>
+
+</html>
